@@ -47,3 +47,9 @@ go run ./generate_wallet/generate_wallet.go
 ```bash
 go run ./keystore/keystore.go
 ```
+
+- address_check:
+
+```bash
+go run ./address_check/address_check.go
+```

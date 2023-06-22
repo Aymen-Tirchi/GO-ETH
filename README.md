@@ -53,3 +53,9 @@ go run ./keystore/keystore.go
 ```bash
 go run ./address_check/address_check.go
 ```
+
+- blocks:
+
+```bash
+go run ./blocks/blocks.go
+```

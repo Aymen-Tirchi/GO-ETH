@@ -59,3 +59,9 @@ go run ./address_check/address_check.go
 ```bash
 go run ./blocks/blocks.go
 ```
+
+-transactions:
+
+```bash
+go run ./transactions/transactions.go
+```

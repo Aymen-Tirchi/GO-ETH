@@ -60,15 +60,19 @@ go run ./address_check/address_check.go
 go run ./blocks/blocks.go
 ```
 
--transactions:
+- transactions:
 
 ```bash
 go run ./transactions/transactions.go
 ```
 
+- transfer eth:
+
 ```bash
 go run ./transfer_eth/transfer_eth.go
 ```
+
+- transfer tokens:
 
 ```bash
 go run ./transfer_tokens/transfer_tokens.go

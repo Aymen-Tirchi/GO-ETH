@@ -69,3 +69,7 @@ go run ./transactions/transactions.go
 ```bash
 go run ./transfer_eth/transfer_eth.go
 ```
+
+```bash
+go run ./transfer_tokens/transfer_tokens.go
+```

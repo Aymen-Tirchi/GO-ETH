@@ -77,3 +77,9 @@ go run ./transfer_eth/transfer_eth.go
 ```bash
 go run ./transfer_tokens/transfer_tokens.go
 ```
+
+- block subscribe:
+
+```bash
+go run block_subscribe/block_subscribe.go
+```

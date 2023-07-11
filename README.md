@@ -83,3 +83,9 @@ go run ./transfer_tokens/transfer_tokens.go
 ```bash
 go run block_subscribe/block_subscribe.go
 ```
+
+- transaction raw create:
+
+```bash
+go run transaction_raw_create/transaction_raw_create.go
+```

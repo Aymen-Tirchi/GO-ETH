@@ -18,74 +18,80 @@ go mod download
 
 3. Run the desired functionality by executing the corresponding Go file:
 
-- client:
+- Setting up the Client:
 
 ```bash
 go run ./client/client.go
 ```
 
-- address:
+- Accounts
 
 ```bash
 go run ./address/address.go
 ```
 
-- account_balance:
+- Account Balances
 
 ```bash
 go run ./account_balance/account_balance.go
 ```
 
-- generate_wallet:
+- Generating New Wallets
 
 ```bash
 go run ./generate_wallet/generate_wallet.go
 ```
 
-- keystore:
+- Keystores
 
 ```bash
 go run ./keystore/keystore.go
 ```
 
-- address_check:
+- Address Check
 
 ```bash
 go run ./address_check/address_check.go
 ```
 
-- blocks:
+- Querying Blocks
 
 ```bash
 go run ./blocks/blocks.go
 ```
 
-- transactions:
+- Querying Transactions
 
 ```bash
 go run ./transactions/transactions.go
 ```
 
-- transfer eth:
+- Transferring ETH
 
 ```bash
 go run ./transfer_eth/transfer_eth.go
 ```
 
-- transfer tokens:
+- Transferring Tokens (ERC-20)
 
 ```bash
 go run ./transfer_tokens/transfer_tokens.go
 ```
 
-- block subscribe:
+- Subscribing to New Blocks
 
 ```bash
 go run block_subscribe/block_subscribe.go
 ```
 
-- transaction raw create:
+- Create Raw Transaction
 
 ```bash
 go run transaction_raw_create/transaction_raw_create.go
+```
+
+- Send Raw Transaction:
+
+```bash
+go run transaction_raw_sendreate/transaction_raw_sendreate.go
 ```

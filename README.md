@@ -16,6 +16,18 @@ git clone https://github.com/Aymen-Tirchi/GO-ETH.git && cd GO-ETH
 go mod download
 ```
 
+Make sure to include the Go binary directory in your system's PATH environment variable. You can do this by adding the following line to your ~/.bashrc or ~/.bash_profile file:
+
+```bash
+export PATH=$PATH:$GOPATH/bin
+```
+
+run the following command to apply the changes: 
+
+```bash
+source ~/.bashrc
+```
+
 ## Sections
 
 The project is organized into different sections, each focusing on a specific aspect of Ethereum development. Below is a list of available sections with their corresponding readme files that provide instructions on how to run the code for each section:

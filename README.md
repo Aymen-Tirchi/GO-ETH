@@ -16,99 +16,19 @@ git clone https://github.com/Aymen-Tirchi/GO-ETH.git && cd GO-ETH
 go mod download
 ```
 
-3. Run the desired functionality by executing the corresponding Go file:
+## Sections
 
-- Setting up the Client:
+The project is organized into different sections, each focusing on a specific aspect of Ethereum development. Below is a list of available sections with their corresponding readme files that provide instructions on how to run the code for each section:
 
-```bash
-go run ./client/client.go
-```
+- Client: Contains code for setting up the Ethereum client and connecting to the Ethereum network.
+- Accounts: Includes functionality related to Ethereum accounts, such as generating new accounts and managing account balances.
+- Transactions: Covers Ethereum transactions, including querying blocks and transactions, transferring ETH, and transferring tokens (ERC-20).
+- Smart Contracts: Focuses on smart contract development, including compiling smart contracts, deploying and interacting with contracts, and working with contract events.
+- Event Logs: Provides functionality for subscribing to and reading Ethereum event logs, including event logs from ERC-20 tokens and 0x Protocol.
+- Signatures: Covers generating and verifying cryptographic signatures for Ethereum transactions and messages.
+- Testing: Includes testing utilities and examples for Ethereum development.
+- Swarm: Covers setting up and interacting with the Ethereum Swarm decentralized storage network.
+- Whisper: Focuses on connecting to and using the Ethereum Whisper protocol for secure messaging.
+- Utilities: Provides a collection of utility functions for Ethereum development.
 
-- Accounts
-
-```bash
-go run ./address/address.go
-```
-
-- Account Balances
-
-```bash
-go run ./account_balance/account_balance.go
-```
-
-- Generating New Wallets
-
-```bash
-go run ./generate_wallet/generate_wallet.go
-```
-
-- Keystores
-
-```bash
-go run ./keystore/keystore.go
-```
-
-- Address Check
-
-```bash
-go run ./address_check/address_check.go
-```
-
-- Querying Blocks
-
-```bash
-go run ./blocks/blocks.go
-```
-
-- Querying Transactions
-
-```bash
-go run ./transactions/transactions.go
-```
-
-- Transferring ETH
-
-```bash
-go run ./transfer_eth/transfer_eth.go
-```
-
-- Transferring Tokens (ERC-20)
-
-```bash
-go run ./transfer_tokens/transfer_tokens.go
-```
-
-- Subscribing to New Blocks
-
-```bash
-go run block_subscribe/block_subscribe.go
-```
-
-- Create Raw Transaction
-
-```bash
-go run transaction_raw_create/transaction_raw_create.go
-```
-
-- Send Raw Transaction:
-
-```bash
-go run transaction_raw_sendreate/transaction_raw_sendreate.go
-```
-
-- Smart Contract Compilation & ABI:
-To compile the Store.sol smart contract and generate the ABI and EVM bytecode, run the following command:
-
-```bash
-solc --bin Store.sol -o build
-```
-Make sure you have the solc compiler installed before running this command.
-
-To install the abigen tool, which is used to generate the Go contract file, execute the following command:
-```bash
-go install github.com/ethereum/go-ethereum/cmd/abigen@latest
-```
-Once the installation is complete, you can use abigen to generate the Go contract file by running the following command:
-```bash
-abigen --bin=./build/Store.bin --abi=./build/Store.abi --pkg=store --out=Store.go
-```
+Please navigate to the specific folders for each section to access the corresponding readme files and learn more about the functionality and instructions on how to run the code.

@@ -35,7 +35,7 @@ The project is organized into different sections, each focusing on a specific as
 - [Client](https://github.com/Aymen-Tirchi/GO-ETH/tree/main/client): Contains code for setting up the Ethereum client and connecting to the Ethereum network.
 - [Accounts](https://github.com/Aymen-Tirchi/GO-ETH/tree/main/Accounts): Includes functionality related to Ethereum accounts, such as generating new accounts and managing account balances.
 - [Transactions](https://github.com/Aymen-Tirchi/GO-ETH/tree/main/Transactions): Covers Ethereum transactions, including querying blocks and transactions, transferring ETH, and transferring tokens (ERC-20).
-- [Smart Contracts](https://github.com/Aymen-Tirchi/GO-ETH/tree/main/SmartContracts): Focuses on smart contract development, including compiling smart contracts, deploying and interacting with contracts, and working with contract events.
+- [Smart Contracts](https://github.com/Aymen-Tirchi/GO-ETH/tree/main/smart_contracts): Focuses on smart contract development, including compiling smart contracts, deploying and interacting with contracts, and working with contract events.
 <!-- - Event Logs: Provides functionality for subscribing to and reading Ethereum event logs, including event logs from ERC-20 tokens and 0x Protocol.
 - Signatures: Covers generating and verifying cryptographic signatures for Ethereum transactions and messages.
 - Testing: Includes testing utilities and examples for Ethereum development.

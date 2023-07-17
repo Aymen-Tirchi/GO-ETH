@@ -19,7 +19,7 @@ go mod download
 Make sure to include the Go binary directory in your system's PATH environment variable. You can do this by adding the following line to your ~/.bashrc or ~/.bash_profile file:
 
 ```bash
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
 run the following command to apply the changes: 

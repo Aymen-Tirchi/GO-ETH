@@ -52,8 +52,25 @@ solc --abi --bin store.sol -o build
 ```bash
 abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store.go
 ```
-To load the contract, you can run the following command:
 
 ```bash
 go run contract_load.go
+```
+
+- Querying a Smart Contract
+
+```bash
+cd smart_contract_read
+```
+
+```bash
+solc --abi --bin store.sol -o build
+```
+
+```bash
+abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store.go
+```
+
+```bash
+go run contract_read.go
 ```

@@ -3,5 +3,5 @@
 - For setting up the client you can run this command:
 
 ```bash
-go run ./client/client.go
+go run ./cmd/client/main.go
 ```

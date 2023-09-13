@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-	store "github.com/aymen-tirchi/go-ethereum/smart_contracts/smart_contract_load/build"
+	store "github.com/aymen-tirchi/go-ethereum/cmd/smart_contracts/smart_contract_load/build"
 )
 
 func main() {

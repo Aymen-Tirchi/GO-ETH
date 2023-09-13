@@ -6,13 +6,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
+
+	store "github.com/aymen-tirchi/go-ethereum/cmd/smart_contracts/smart_contract_deploy/build"
 )
 
-func main() {
+func main () {
 	client, err := ethclient.Dial("https://cloudflare-eth.com")
 	if err != nil {
 		panic(err)
@@ -24,31 +25,36 @@ func main() {
 	publicKey := privateKey.Public()
 	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
 	if !ok {
-		fmt.Println("error casting public key to ECDSA")
+		panic("cannot assert type : publickey is not of type *ecdsa.PublicKey")
 	}
-	fromAddress := crypto.PubkeyToAddress(*publicKeyECDSA)
-
+	fromAddress :=crypto.PubkeyToAddress(*publicKeyECDSA)
 	nonce, err := client.PendingNonceAt(context.Background(), fromAddress)
 	if err != nil {
 		panic(err)
 	}
-
-	value := big.NewInt(1000000000000000000)
-	gasLimit := uint64(21000)
 	gasPrice, err := client.SuggestGasPrice(context.Background())
 	if err != nil {
 		panic(err)
 	}
-	toAddress := common.HexToAddress("0x4592d8f8d7b001e72cb26a73e4fa1806a51ac79d")
-	tx := types.NewTransaction(nonce, toAddress, value, gasLimit, gasPrice, nil)
 
-	chainID, err := client.NetworkID(context.Background())
+	auth, err := bind.NewKeyedTransactorWithChainID(privateKey, big.NewInt(1))
 	if err != nil {
 		panic(err)
 	}
-	signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), privateKey)
+
+	auth.Nonce = big.NewInt(int64(nonce))
+	auth.Value = big.NewInt(0)
+	auth.GasLimit = uint64(300000)
+	auth.GasPrice = gasPrice
+
+	input := "1.0"
+	address, tx, instance, err := store.DeployStore(auth, client, input)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("transaction sent %s", signedTx.Hash().Hex())
+
+	fmt.Printf("the addres of deployed contract :%v\n", address.Hex())
+	fmt.Printf("transaction hash : %v\n", tx.Hash().Hex())
+
+	_ = instance
 }

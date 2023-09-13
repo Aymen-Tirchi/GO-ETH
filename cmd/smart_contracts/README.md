@@ -5,7 +5,7 @@ Make sure you have the solc compiler installed
 - Smart Contract Compilation & ABI
 
 ```bash
-cd smart_contract_compile
+cd cmd/smart_contracts/smart_contract_compile
 ```
 
 To compile a Solidity contract and generate the EVM bytecode and ABI file, use the following command:
@@ -23,7 +23,7 @@ abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store
 - Deploying a Smart Contract
 
 ```bash
-cd smart_contract_deploy
+cd ../smart_contract_deploy
 ```
 
 ```bash
@@ -36,13 +36,13 @@ abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store
 To deploy the contract using `contract_deploy.go`, you can run the following command:
 
 ```bash
-go run contract_deploy.go
+go run main.go
 ```
 
 - Loading a Smart Contract
 
 ```bash
-cd smart_contract_load
+cd ../smart_contract_load
 ```
 
 ```bash
@@ -54,13 +54,13 @@ abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store
 ```
 
 ```bash
-go run contract_load.go
+go run main.go
 ```
 
 - Querying a Smart Contract
 
 ```bash
-cd smart_contract_read
+cd ../smart_contract_read
 ```
 
 ```bash
@@ -72,5 +72,5 @@ abigen --bin=build/store.bin --abi=build/store.abi --pkg=store --out=build/Store
 ```
 
 ```bash
-go run contract_read.go
+go run main.go
 ```
